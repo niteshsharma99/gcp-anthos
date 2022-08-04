@@ -1,0 +1,57 @@
+apiVersion: constraints.gatekeeper.sh/v1beta1
+kind: K8sPSPPrivilegedContainer
+metadata:
+  name: psp-privileged-container
+spec:
+  match:
+    excludedNamespaces:
+    - anthos-creds
+    - anthos-identity-service
+    - capi-kubeadm-bootstrap-system
+    - capi-system
+    - capi-webhook-system
+    - cd-pipeline-test
+    - cert-manager
+    - cluster-anthos-poc
+    - config-managemnet-monitoring
+    - config-managemnet-system
+    - gatekeeper-system
+    - gke-connect
+    - gke-system
+    - gto-scrt-app-dev
+    - gto-scrt-app-qa
+    - gto-scrt-app-sbox
+    - gto-scrt-db-dev
+    - gto-scrt-db-qa
+    - gto-scrt-db-sbox
+    - gto-scrt-ui-dev
+    - gto-scrt-ui-qa
+    - gto-scrt-ui-sbox
+    - kube-node-lease
+    - kube-public
+    - kube-system
+    - manageiqoperator
+    - monitoring
+    - mypgo
+    - namespace-mgmt
+    - pg-ssd
+    - pgdell
+    - playground-mike2
+    - playground-orlando
+    - powermax
+    - pure-pso
+    - rails-app
+    - resource-group-system
+    - snapshot-api-mike
+    - snapshot-api-op
+    - snapshot-api-test
+    - sp-system
+    - twistlock
+    - default
+    - elastic-operator
+    kinds:
+    - apiGroups:
+      - ""
+      kinds:
+      - Pod
+      - Deployment
