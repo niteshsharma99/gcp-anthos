@@ -1,1 +1,1 @@
-# gto-anthos
+# gcp-anthos
