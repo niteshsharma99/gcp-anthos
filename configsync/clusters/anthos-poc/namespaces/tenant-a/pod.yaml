@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: anthos-poc-t-a-pod
+  annotations:
+    configsync.gke.io/cluster-name-selector: anthos-poc
+  namespace: tenant-a
+spec:
+  containers:
+  - image: nginx
+    name: nginx
+    imagePullPolicy: IfNotPresent

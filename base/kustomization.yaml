@@ -1,0 +1,8 @@
+resources:
+- kustomize_ns.yaml
+
+namespace: kustomize
+
+helmCharts:
+- name: istio-bookinfo
+  repo: https://kallarajesh.github.io/helmrepo/charts

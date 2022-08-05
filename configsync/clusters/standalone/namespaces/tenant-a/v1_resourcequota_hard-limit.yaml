@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  annotations:
+    configsync.gke.io/cluster-name-selector: standalone
+  name: hard-limit
+  namespace: tenant-a
+spec:
+  hard:
+    cpu: "20"
+    memory: 1Gi
+    pods: "10"

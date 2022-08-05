@@ -1,0 +1,15 @@
+---
+apiVersion: configsync.gke.io/v1beta1
+kind: RepoSync
+metadata:
+  name: rs-a-t
+  namespace: anthos-third
+spec:
+  sourceFormat: unstructured
+  git:
+    auth: ssh
+    branch: main
+    repo: git@github.gwd.broadcom.net:GTO/gto-anthos-multirepo.git
+    dir: "namespaces/anthos-third"
+    secretRef:
+      name: git-creds

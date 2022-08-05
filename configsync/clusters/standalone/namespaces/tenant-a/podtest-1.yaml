@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: standalone-t-a-pod2
+  annotations:
+    configsync.gke.io/cluster-name-selector: standalone
+  namespace: tenant-a
+spec:
+  containers:
+  - image: nginx
+    name: nginx
+    imagePullPolicy: IfNotPresent
+    resources:
+      limits:
+        cpu: "1"
+        memory: 512Mi
+        

@@ -1,0 +1,15 @@
+---
+apiVersion: configsync.gke.io/v1beta1
+kind: RepoSync
+metadata:
+  name: rs-a-s
+  namespace: anthos-second
+spec:
+  sourceFormat: unstructured
+  git:
+    auth: ssh
+    branch: anthos-poc
+    repo: git@github.gwd.broadcom.net:GTO/gto-anthos.git
+    dir: "namespaces/anthos-second"
+    secretRef:
+      name: git-creds
