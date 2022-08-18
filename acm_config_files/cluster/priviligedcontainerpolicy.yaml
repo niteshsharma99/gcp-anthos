@@ -1,21 +1,21 @@
-apiVersion: constraints.gatekeeper.sh/v1beta1
-kind: K8sPSPPrivilegedContainer
-metadata:
-  name: psp-privileged-container
-spec:
-  match:
-    excludedNamespaces:
-    - config-management-monitoring
-    - config-management-system
-    - default
-    - gatekeeper-system
-    - resource-group-system
-    - kube-system
-    - kube-public
-    - kube-node-lease
-    kinds:
-    - apiGroups:
-      - ""
-      kinds:
-      - Pod
-      - Deployment
+#apiVersion: constraints.gatekeeper.sh/v1beta1
+#kind: K8sPSPPrivilegedContainer
+#metadata:
+#  name: psp-privileged-container
+#spec:
+#  match:
+#    excludedNamespaces:
+#    - config-management-monitoring
+#    - config-management-system
+#    - default
+#    - gatekeeper-system
+#    - resource-group-system
+#    - kube-system
+#    - kube-public
+#    - kube-node-lease
+#    kinds:
+#    - apiGroups:
+#      - ""
+#      kinds:
+#      - Pod
+#      - Deployment
